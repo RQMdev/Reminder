@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "nodemon ./bin/www"
   },
   "dependencies": {
     "bcryptjs": "*",
@@ -25,5 +25,8 @@
     "passport": "*",
     "passport-http": "*",
     "passport-local": "*"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
   }
 }
