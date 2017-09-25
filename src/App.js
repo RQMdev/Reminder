@@ -1,21 +1,141 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { Route, withRouter } from 'react-router-dom';
+import $ from 'jquery';
+import Dashboard from './Components/Dashboard';
+import SignIn from './Components/SignIn';
+import SignUp from './Components/SignUp';
 import './App.css';
 
 class App extends Component {
+  constructor(){
+    super();
+    this.state = {
+      token: '',
+      stickys: []
+    }
+  }
+
+  handleAddNewUser(user){
+    console.log('User = ',user);
+    $.ajax({
+      type: 'POST',
+      url: 'users/signup',
+      contentType: "application/json; charset=utf-8",
+      dataType: 'json',
+      data: JSON.stringify(user),
+      success: function(data){
+        this.setState({token: data.token});
+        if (this.state.token !== ''){
+        this.props.history.push('/');
+        this.getStickys();
+        }
+        console.log('This.state = ', this.state);
+      }.bind(this),
+      error: function(xhr, status, err){
+        console.log('This is an error = ', err);
+        console.log('This is the xhr = ', xhr);
+        console.log('This is the status = ', status);
+      }
+    });
+  }
+
+  handleAuthUser(user){
+    console.log(user);
+    $.ajax({
+      type: 'POST',
+      url: 'users/signin',
+      contentType: "application/json; charset=utf-8",
+      dataType: 'json',
+      data: JSON.stringify(user),
+      success: function(data){
+        this.setState({token: data.token});
+        if (this.state.token !== ''){
+        this.props.history.push('/');
+        this.getStickys();
+        }
+        console.log('This.state = ', this.state);
+      }.bind(this),
+      error: function(xhr, status, err){
+        console.log('This is an error = ', err);
+        console.log('This is the xhr = ', xhr);
+        console.log('This is the status = ', status);
+      }
+    });
+  }
+
+  componentWillMount(){
+    if (this.state.token === ''){
+    this.props.history.push('/signin');
+    }
+  }
+
+  getStickys(){
+    $.ajax({
+      type: 'GET',
+      url: 'stickys',
+      contentType: "application/json; charset=utf-8",
+      dataType: 'json',
+      beforeSend: function(xhr){
+        xhr.setRequestHeader('Authorization', this.state.token);
+      }.bind(this),
+      success: function(stickys){
+        this.setState({stickys});
+        console.log('This.state = ', this.state);
+      }.bind(this),
+      error: function(xhr, status, err){
+        console.log('This is an error = ', err);
+        console.log('This is the xhr = ', xhr);
+        console.log('This is the status = ', status);
+      }
+    });
+  }
+
+  handleAddNewSticky(newSticky){
+    console.log(newSticky);
+    $.ajax({
+      type: 'POST',
+      url: 'stickys/add',
+      contentType: "application/json; charset=utf-8",
+      dataType: 'json',
+      data: JSON.stringify(newSticky),
+      beforeSend: function(xhr){
+        xhr.setRequestHeader('Authorization', this.state.token);
+      }.bind(this),
+      success: function(newSticky){
+        let stickys = this.state.stickys;
+        stickys.push(newSticky);
+        this.setState({stickys});
+        console.log('This.state = ', this.state);
+      }.bind(this),
+      error: function(xhr, status, err){
+        console.log('This is an error = ', err);
+        console.log('This is the xhr = ', xhr);
+        console.log('This is the status = ', status);
+      }
+    });
+  }
+  // componentDidMount(){
+  //   if (this.state.token !== ''){
+  //
+  //   }
+  // }
+
+
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+        <div className='app'>
+          <Route  path="/signin" render={
+            ()=><SignIn authUser={this.handleAuthUser.bind(this)} />
+          }/>
+          <Route path="/signup" render={
+            ()=><SignUp addNewUser={this.handleAddNewUser.bind(this)} />
+          } />
+          <Route exact path="/" render={
+            ()=><Dashboard stickys={this.state.stickys} addNewSticky={this.handleAddNewSticky.bind(this)}/>
+          } />
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
     );
   }
 }
 
-export default App;
+export default withRouter(App);
