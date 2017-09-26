@@ -6,10 +6,7 @@ li {
     list-style-type: none;
 }
 
-body {
-    min-height: 100vh;
-    flex-direction: column;
-}
+body {}
 
 
 /*========================== 02. MENU ==========================++++++++++*/

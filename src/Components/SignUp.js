@@ -28,7 +28,7 @@ class SignUp extends Component {
             <form onSubmit={this.handleSubmit.bind(this)} className="register-form">
                 <div className="row">
                     <div className="input-field col s12 center">
-                        <img className="responsive-img logo-form" src="logo-min.png" alt="" />
+                        <img className="responsive-img logo-form" src="images/logo-min.png" alt="" />
                         <h4>Inscription</h4>
                     </div>
                 </div>
