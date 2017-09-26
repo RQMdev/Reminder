@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Error from './Error';
 import { Link } from 'react-router-dom'
 
 class SignUp extends Component {
@@ -21,6 +22,15 @@ class SignUp extends Component {
   }
 
   render() {
+		let errors;
+		if (this.props.error){
+			errors = this.props.error.map(error => {
+				return(
+					<Error key={error} error={error}/>
+				);
+			});
+		}
+
     return (
      <div>
      <div className=" form-register container">
@@ -45,7 +55,7 @@ class SignUp extends Component {
                     <div className="input-field col s10">
                         <i className="mdi-communication-email prefix"></i>
                         <input id="email" type="email" ref="email"/>
-                        <label htmlFor="email" class="center-align">Email</label>
+                        <label htmlFor="email" className="center-align">Email</label>
                     </div>
                 </div>
                 <div className="row margin">
@@ -56,8 +66,9 @@ class SignUp extends Component {
                     </div>
                 </div>
                 <div className="row">
-                <div className="input-field col s12">
-                <input className="btn waves-effect waves-light col s12 "type="submit" value="S'enregistrer" />
+									{errors}
+	                <div className="input-field col s12">
+	                <input className="btn waves-effect waves-light col s12 "type="submit" value="S'enregistrer" />
                 </div>
                
                 <div className="input-field  col s12">

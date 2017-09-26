@@ -11,12 +11,14 @@ class App extends Component {
     super();
     this.state = {
       token: '',
-      stickys: []
+      stickys: [],
+			error: []
     }
   }
 
   handleAddNewUser(user){
     console.log('User = ',user);
+		this.cleanErrorInState();
     $.ajax({
       type: 'POST',
       url: 'users/signup',
@@ -35,7 +37,8 @@ class App extends Component {
         console.log('This is an error = ', err);
         console.log('This is the xhr = ', xhr);
         console.log('This is the status = ', status);
-      }
+				this.addErrorToState(xhr);
+      }.bind(this)
     });
   }
 
@@ -167,6 +170,25 @@ class App extends Component {
     });
 	}
 
+	cleanErrorInState(){
+		let state = this.state;
+		state.error = '';
+		this.setState(state);
+	}
+
+	addErrorToState(xhr){
+		let error;
+		if (xhr.responseJSON.details){
+			error = xhr.responseJSON.details[0].message;
+		} else if (xhr.responseJSON.error){
+			error = xhr.responseJSON.error;
+		}
+
+		let state = this.state;
+		state.error = [error];
+		this.setState(state);
+	}
+
   render() {
     return (
         <div className='app'>
@@ -174,7 +196,7 @@ class App extends Component {
             ()=><SignIn authUser={this.handleAuthUser.bind(this)} />
           }/>
           <Route path="/signup" render={
-            ()=><SignUp addNewUser={this.handleAddNewUser.bind(this)} />
+            ()=><SignUp addNewUser={this.handleAddNewUser.bind(this)} error={this.state.error}/>
           } />
           <Route exact path="/" render={
             ()=><Dashboard stickys={this.state.stickys} updateSticky={this.handleUpdateSticky.bind(this)} onDelete={this.handleDeleteSticky.bind(this)} addNewSticky={this.handleAddNewSticky.bind(this)}/>
