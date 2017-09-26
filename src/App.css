@@ -7,8 +7,8 @@ li {
 }
 
 body {
-    background-image: url('');
-    background-size: cover;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 
@@ -33,6 +33,92 @@ nav .brand-logo {
 
 nav .brand-logo i {
     font-size: 1.5em;
+}
+
+
+/*========================== 02. FORMULAIRES ==========================++++++++++*/
+
+.form-login {
+    margin-top: 1.2em;
+    background-color: #E0E0E0;
+    display: inline-block;
+    padding: 30px 15px 0px 15px;
+    border: 1px solid #EEE;
+}
+
+.logo-form {
+    margin-top: 5px;
+    position: relative;
+    height: 110px !important;
+}
+
+.logo-form-login {
+    margin-left: 30%;
+    margin-right: 20%;
+    position: relative;
+    height: 110px !important;
+}
+
+.input-field input[type=date]:focus+label,
+.input-field input[type=text]:focus+label,
+.input-field input[type=email]:focus+label,
+.input-field input[type=password]:focus+label {
+    color: #e91e63;
+}
+
+.input-field input[type=date]:focus,
+.input-field input[type=text]:focus,
+.input-field input[type=email]:focus,
+.input-field input[type=password]:focus {
+    border-bottom: 2px solid #e91e63;
+    box-shadow: none;
+}
+
+.intro {
+    background-color: rgba(189, 189, 189, 0.5);
+    margin-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+.intro h1 {
+    font-size: 2em;
+    font-style: bold;
+    padding-top: 100px;
+}
+
+.intro li {
+    font-size: 0.8em;
+}
+
+.btn-intro {
+    margin-top: 20px !important;
+}
+
+.form-login-btn {
+    margin-top: -23px;
+}
+
+.postit-logo {
+    max-height: 160px;
+    margin-left: 40%;
+    margin-right: 30%;
+}
+
+.form-register {
+    margin-top: 40px;
+}
+
+.input-field .prefix {
+    position: absolute;
+    width: 3rem;
+    padding-left: 0.5em;
+}
+
+.label-form-register {
+    padding-left: 5%;
 }
 
 

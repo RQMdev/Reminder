@@ -21,28 +21,53 @@ class SignUp extends Component {
 
   render() {
     return (
-      <div className="sign-up">
-        <h2>SIGN UP FORM</h2>
-        <form onSubmit={this.handleSubmit.bind(this)}>
-          <ul>
-            <li>
-              <label>Username</label><br />
-              <input type="text" ref="username" />
-            </li>
-            <li>
-              <label>Email</label><br />
-              <input type="text" ref="email" />
-            </li>
-            <li>
-              <label>Password</label><br />
-              <input type="text" ref="password" />
-            </li>
-            <li>
-              <input type="submit" value="Submit" />
-            </li>
-          </ul>
-        </form>
-      </div>
+     <div>
+     <div className="container">
+    <div className="row">
+        <div className="col l5 push-l3 col m6 push-m4  col s12  z-depth-4 card-panel">
+            <form onSubmit={this.handleSubmit.bind(this)} className="register-form">
+                <div className="row">
+                    <div className="input-field col s12 center">
+                        <img className="responsive-img logo-form" src="logo-min.png" alt="" />
+                        <h4>Inscription</h4>
+                    </div>
+                </div>
+                <div className="row margin">
+                    <div className=" input-field col s10">
+                        <i className="mdi-social-person-outline prefix"></i>
+                        <input id="username" type="text" ref="username" />
+                        <label htmlFor="username" className="center-align">Username</label>
+                    </div>
+                </div>
+                <div className="row margin">
+                    <div className="input-field col s10">
+                        <i className="mdi-communication-email prefix"></i>
+                        <input id="email" type="email" ref="email"/>
+                        <label htmlFor="email" class="center-align">Email</label>
+                    </div>
+                </div>
+                <div className="row margin">
+                    <div className="input-field col s10">
+                        <i className="mdi-action-lock-outline prefix"></i>
+                        <input id="password" type="password" ref="password"/>
+                        <label htmlFor="password">Password</label>
+                    </div>
+                </div>
+                <div className="row">
+                <div className="input-field col s12">
+                <input className="btn waves-effect waves-light col s12 "type="submit" value="S'enregistrer" />
+                </div>
+        
+                <div className="input-field  col s12">
+                    <p className="margin center medium-small sign-up">Vous avez déja un compte? <a href="index.html">Se connecter</a></p>
+                </div>
+            </div>
+
+           </form>
+        </div>
+    </div>
+</div>
+</div>
     );
   }
 }
