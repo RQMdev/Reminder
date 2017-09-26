@@ -141,6 +141,32 @@ class App extends Component {
     });
 	}
 
+	handleUpdateSticky(updatedSticky){
+		console.log(updatedSticky);
+		$.ajax({
+      type: 'POST',
+      url: 'stickys/edit',
+      contentType: "application/json; charset=utf-8",
+      dataType: 'json',
+      data: JSON.stringify(updatedSticky),
+      beforeSend: function(xhr){
+        xhr.setRequestHeader('Authorization', this.state.token);
+      }.bind(this),
+      success: function(data){
+        let stickys = this.state.stickys;
+        let index = stickys.findIndex(x => x._id === updatedSticky._id);
+				stickys[index] = data;
+        this.setState({stickys});
+        console.log('This.state = ', this.state);
+      }.bind(this),
+      error: function(xhr, status, err){
+        console.log('This is an error = ', err);
+        console.log('This is the xhr = ', xhr);
+        console.log('This is the status = ', status);
+      }
+    });
+	}
+
   render() {
     return (
         <div className='app'>
@@ -151,7 +177,7 @@ class App extends Component {
             ()=><SignUp addNewUser={this.handleAddNewUser.bind(this)} />
           } />
           <Route exact path="/" render={
-            ()=><Dashboard stickys={this.state.stickys} onDelete={this.handleDeleteSticky.bind(this)} addNewSticky={this.handleAddNewSticky.bind(this)}/>
+            ()=><Dashboard stickys={this.state.stickys} updateSticky={this.handleUpdateSticky.bind(this)} onDelete={this.handleDeleteSticky.bind(this)} addNewSticky={this.handleAddNewSticky.bind(this)}/>
           } />
         </div>
     );

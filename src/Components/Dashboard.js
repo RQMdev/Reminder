@@ -3,6 +3,10 @@ import Sticky from './Sticky';
 import AddSticky from './AddSticky';
 
 class Dashboard extends Component {
+	onUpdate(updatedSticky){
+		this.props.updateSticky(updatedSticky);
+	}
+
 	deleteSticky(sticky){
 		this.props.onDelete(sticky);
 	}
@@ -16,7 +20,7 @@ class Dashboard extends Component {
     if (this.props.stickys){
       stickys = this.props.stickys.map(sticky => {
         return (
-          <Sticky onDelete={this.deleteSticky.bind(this)} key={sticky._id} sticky={sticky} />
+          <Sticky updateSticky={this.onUpdate.bind(this)} onDelete={this.deleteSticky.bind(this)} key={sticky._id} sticky={sticky} />
         );
       });
     }
