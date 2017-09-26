@@ -44,6 +44,7 @@ class App extends Component {
 
   handleAuthUser(user){
     console.log(user);
+		this.cleanErrorInState();
     $.ajax({
       type: 'POST',
       url: 'users/signin',
@@ -62,7 +63,8 @@ class App extends Component {
         console.log('This is an error = ', err);
         console.log('This is the xhr = ', xhr);
         console.log('This is the status = ', status);
-      }
+				this.addErrorToState(xhr);
+      }.bind(this)
     });
   }
 
@@ -178,10 +180,14 @@ class App extends Component {
 
 	addErrorToState(xhr){
 		let error;
-		if (xhr.responseJSON.details){
-			error = xhr.responseJSON.details[0].message;
-		} else if (xhr.responseJSON.error){
-			error = xhr.responseJSON.error;
+		if (xhr.responseJSON){
+			if (xhr.responseJSON.details){
+				error = xhr.responseJSON.details[0].message;
+			} else if (xhr.responseJSON.error){
+				error = xhr.responseJSON.error;
+			}
+		} else if (xhr.responseText){
+			error = xhr.responseText;
 		}
 
 		let state = this.state;
@@ -193,7 +199,7 @@ class App extends Component {
     return (
         <div className='app'>
           <Route  path="/signin" render={
-            ()=><SignIn authUser={this.handleAuthUser.bind(this)} />
+            ()=><SignIn authUser={this.handleAuthUser.bind(this)} error={this.state.error}/>
           }/>
           <Route path="/signup" render={
             ()=><SignUp addNewUser={this.handleAddNewUser.bind(this)} error={this.state.error}/>

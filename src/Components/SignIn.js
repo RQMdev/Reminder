@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import Error from './Error';
 
 class SignIn extends Component {
-  
+
   constructor(){
     super();
     this.state = {
@@ -20,6 +21,15 @@ class SignIn extends Component {
   }
 
   render() {
+		let errors;
+		if (this.props.error){
+			errors = this.props.error.map(error => {
+				return(
+					<Error key={error} error={error}/>
+				);
+			});
+		}
+
     return (
 
       <div className="sign-in">
@@ -37,6 +47,7 @@ class SignIn extends Component {
               <input type="text" ref="password" />
             </li>
             <li>
+							{errors}
               <input type="submit" value="Submit" />
             </li>
           </ul>
