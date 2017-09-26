@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="utf-8">
@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#000000">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
@@ -21,8 +21,33 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>Reminder</title>
 </head>
+<!-- Début du menu-->
+<nav>
+    <div class="nav-wrapper">
+        <img class="brand-logo" src="images/logo.svg" alt="">
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="#"><i class="material-icons">dashboard</i></a></li>
+            <li><a href="#"><i class="material-icons">edit</i></a></li>
+            <li><a href="#"><i class="material-icons">person</i></a></li>
+        </ul>
+        <!-- Début du menu mobile -->
+        <ul class="side-nav" id="mobile-demo">
+            <li><a href="#"><i class="material-icons">dashboard</i>Fil de veille</a></li>
+            <li><a href="#"><i class="material-icons">edit</i>Créer un article</a></li>
+            <li><a href="#"><i class="material-icons">chat</i>Mes messages</a></li>
+            <li><a href="#"><i class="material-icons">notifications</i>Mes notifications</a></li>
+            <li><a href="#"><i class="material-icons">person</i>Mon profil</a></li>
+            <li><a href="#"><i class="material-icons">more_vert</i>Se déconnecter</a></li>
+
+        </ul>
+        <!-- // Fin du menu mobile -->
+    </div>
+</nav>
+</header>
+<!-- // Fin  du menu-->
 
 <body>
     <noscript>
