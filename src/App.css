@@ -6,7 +6,10 @@ li {
     list-style-type: none;
 }
 
-body {}
+body {
+    background-image: url('background.jpg');
+    background-size: cover;
+}
 
 
 /*========================== 02. MENU ==========================++++++++++*/
