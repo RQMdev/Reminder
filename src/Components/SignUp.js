@@ -22,9 +22,10 @@ class SignUp extends Component {
   render() {
     return (
      <div>
-     <div className="container">
+     <div className=" form-register container">
     <div className="row">
-        <div className="col l5 push-l3 col m6 push-m4  col s12  z-depth-4 card-panel">
+ 
+        <div className="col l4 m8 offset-m2 offset-l4 s12 offset-l4 z-depth-4 card-panel">
             <form onSubmit={this.handleSubmit.bind(this)} className="register-form">
                 <div className="row">
                     <div className="input-field col s12 center">
@@ -65,6 +66,7 @@ class SignUp extends Component {
 
            </form>
         </div>
+    
     </div>
 </div>
 </div>
