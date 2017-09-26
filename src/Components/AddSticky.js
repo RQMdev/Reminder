@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import Error from './Error';
 class AddSticky extends Component {
   constructor(){
     super();
