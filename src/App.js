@@ -64,7 +64,7 @@ class App extends Component {
   }
 
   componentWillMount(){
-    if (this.state.token === ''){
+    if (this.state.token === '' && this.props.location.pathname === '/'){
     this.props.history.push('/signin');
     }
   }
