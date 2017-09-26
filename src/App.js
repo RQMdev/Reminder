@@ -97,6 +97,7 @@ class App extends Component {
 
   handleAddNewSticky(newSticky){
     console.log(newSticky);
+		this.cleanErrorInState();
     $.ajax({
       type: 'POST',
       url: 'stickys/add',
@@ -116,7 +117,8 @@ class App extends Component {
         console.log('This is an error = ', err);
         console.log('This is the xhr = ', xhr);
         console.log('This is the status = ', status);
-      }
+				this.addErrorToState(xhr);
+      }.bind(this)
     });
   }
 
@@ -174,7 +176,7 @@ class App extends Component {
 
 	cleanErrorInState(){
 		let state = this.state;
-		state.error = '';
+		state.error = [];
 		this.setState(state);
 	}
 
@@ -205,7 +207,7 @@ class App extends Component {
             ()=><SignUp addNewUser={this.handleAddNewUser.bind(this)} error={this.state.error}/>
           } />
           <Route exact path="/" render={
-            ()=><Dashboard stickys={this.state.stickys} updateSticky={this.handleUpdateSticky.bind(this)} onDelete={this.handleDeleteSticky.bind(this)} addNewSticky={this.handleAddNewSticky.bind(this)}/>
+            ()=><Dashboard stickys={this.state.stickys} updateSticky={this.handleUpdateSticky.bind(this)} onDelete={this.handleDeleteSticky.bind(this)} addNewSticky={this.handleAddNewSticky.bind(this)} error={this.state.error}/>
           } />
         </div>
     );

@@ -16,7 +16,7 @@ class Dashboard extends Component {
   }
 
   render() {
-    
+
     let stickys;
     if (this.props.stickys){
       stickys = this.props.stickys.map(sticky => {
@@ -27,13 +27,13 @@ class Dashboard extends Component {
     }
     return (
       <div>
-          
+
    <div className="sticky-bloc container">
    <div className="row">
-           <AddSticky addNewSticky={this.handleAddNewSticky.bind(this)} />
+           <AddSticky addNewSticky={this.handleAddNewSticky.bind(this)} error={this.props.error}/>
            {stickys}
        </div>
-    
+
    </div>
    </div>
 

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Error from './Error';
 
 class AddSticky extends Component {
   constructor(){
@@ -21,6 +22,15 @@ class AddSticky extends Component {
   }
 
   render() {
+		let errors;
+		if (this.props.error){
+			errors = this.props.error.map(error => {
+				return(
+					<Error key={error} error={error}/>
+				);
+			});
+		}
+
     return (
       <div className="add-sticky">
         <form onSubmit={this.handleSubmit.bind(this)}>
@@ -38,6 +48,7 @@ class AddSticky extends Component {
               <input type="number" ref="priority" />
             </li>
             <li>
+							{errors}
               <input type="submit" value="Submit" />
             </li>
           </ul>
