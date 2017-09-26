@@ -36,7 +36,7 @@ class SignUp extends Component {
                     <div className=" input-field col s10">
                         <i className="mdi-social-person-outline prefix"></i>
                         <input id="username" type="text" ref="username" />
-                        <label htmlFor="username" className="center-align">Username</label>
+                        <label htmlFor="username" className="center-align">Pseudo</label>
                     </div>
                 </div>
                 <div className="row margin">
