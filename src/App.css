@@ -93,6 +93,10 @@ nav .brand-logo i {
     font-size: 0.8em;
 }
 
+.intro a {
+    color:#fff;
+}
+
 .btn-intro {
     margin-top: 20px !important;
 }
@@ -121,6 +125,10 @@ nav .brand-logo i {
     padding-left: 5%;
 }
 
+.form-login-btn{
+    background-color: #F55D50;
+}
+
 
 /*========================== 03. STICKY ==========================++++++++++*/
 
@@ -129,6 +137,10 @@ nav .brand-logo i {
     background-color: #E0E0E0;
     width: 260px;
     margin-bottom: 20px;
+}
+
+.form-add-sticky {
+    background-color: #E0E0E0 ;
 }
 
 .sticky-bloc {
@@ -192,9 +204,9 @@ nav .brand-logo i {
 .fa {
     font-size: 40px;
     padding: 10px;
-    color: #E0E0E0;
+    color:#FFF;
 }
 
 .page-footer a:hover {
-    color: #2196f3;
+    color: #9C9C9C;
 }
