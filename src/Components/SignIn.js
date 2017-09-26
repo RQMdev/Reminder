@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import Error from './Error';
 import { Link } from 'react-router-dom';
 
 class SignIn extends Component {
-  
+
   constructor(){
     super();
     this.state = {
@@ -21,6 +22,15 @@ class SignIn extends Component {
   }
 
   render() {
+		let errors;
+		if (this.props.error){
+			errors = this.props.error.map(error => {
+				return(
+					<Error key={error} error={error}/>
+				);
+			});
+		}
+
     return (
     <div>
      
@@ -67,6 +77,7 @@ class SignIn extends Component {
             </li>
            
             <li>
+							{errors}
               <div className="row">
                     <button type='submit' name='btn_login' className="col s12 btn btn-large waves-effect form-login-btn indigo"><Link to="/dashboard">Se connecter</Link></button>
               </div>
