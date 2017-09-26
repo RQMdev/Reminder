@@ -114,12 +114,32 @@ class App extends Component {
       }
     });
   }
-  // componentDidMount(){
-  //   if (this.state.token !== ''){
-  //
-  //   }
-  // }
 
+	handleDeleteSticky(sticky){
+		console.log(sticky);
+		$.ajax({
+      type: 'DELETE',
+      url: 'stickys/delete',
+      contentType: "application/json; charset=utf-8",
+      dataType: 'json',
+      data: JSON.stringify(sticky),
+      beforeSend: function(xhr){
+        xhr.setRequestHeader('Authorization', this.state.token);
+      }.bind(this),
+      success: function(data){
+        let stickys = this.state.stickys;
+        let index = stickys.findIndex(x => x._id === sticky._id);
+				stickys.splice(index, 1);
+        this.setState({stickys});
+        console.log('This.state = ', this.state);
+      }.bind(this),
+      error: function(xhr, status, err){
+        console.log('This is an error = ', err);
+        console.log('This is the xhr = ', xhr);
+        console.log('This is the status = ', status);
+      }
+    });
+	}
 
   render() {
     return (
@@ -131,7 +151,7 @@ class App extends Component {
             ()=><SignUp addNewUser={this.handleAddNewUser.bind(this)} />
           } />
           <Route exact path="/" render={
-            ()=><Dashboard stickys={this.state.stickys} addNewSticky={this.handleAddNewSticky.bind(this)}/>
+            ()=><Dashboard stickys={this.state.stickys} onDelete={this.handleDeleteSticky.bind(this)} addNewSticky={this.handleAddNewSticky.bind(this)}/>
           } />
         </div>
     );
