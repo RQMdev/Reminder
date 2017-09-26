@@ -70,6 +70,25 @@ class Sticky extends Component {
                     </div>
                     <p className="sticky-texte flow-text">{this.props.sticky.content}</p>
                 </div>
+								<form onSubmit={this.handleSubmit.bind(this)}>
+ -          <ul>
+ -            <li>
+ -              <label>Title</label><br />
+ -              <input type="text" ref="title" value={this.state.updatedSticky.title} onChange={this.handleChangeTitle.bind(this)}/>
+ -            </li>
+ -            <li>
+ -              <label>Content</label><br />
+ -              <input type="text" ref="content" value={this.state.updatedSticky.content} onChange={this.handleChangeContent.bind(this)}/>
+ -            </li>
+ -            <li>
+ -              <label>Priority</label><br />
+ -              <input type="number" ref="priority" value={this.state.updatedSticky.priority} onChange={this.handleChangePriority.bind(this)}/>
+ -            </li>
+ -            <li>
+ -              <input type="submit" value="Submit" />
+ -            </li>
+ -          </ul>
+ -        </form>
 								</div>
     );
   }
