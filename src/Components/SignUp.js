@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Error from './Error';
+import { Link } from 'react-router-dom'
 
 class SignUp extends Component {
   constructor(){
@@ -32,9 +33,10 @@ class SignUp extends Component {
 
     return (
      <div>
-     <div className="container">
+     <div className=" form-register container">
     <div className="row">
-        <div className="col l5 push-l3 col m6 push-m4  col s12  z-depth-4 card-panel">
+ 
+        <div className="col l6 m6 offset-m3 offset-l3 s12  z-depth-4 card-panel">
             <form onSubmit={this.handleSubmit.bind(this)} className="register-form">
                 <div className="row">
                     <div className="input-field col s12 center">
@@ -68,14 +70,15 @@ class SignUp extends Component {
 	                <div className="input-field col s12">
 	                <input className="btn waves-effect waves-light col s12 "type="submit" value="S'enregistrer" />
                 </div>
-
+               
                 <div className="input-field  col s12">
-                    <p className="margin center medium-small sign-up">Vous avez déja un compte? <a href="index.html">Se connecter</a></p>
+                    <p className="margin center medium-small sign-up">Vous avez déja un compte?  <Link to="/signin" >Se connecter</Link></p>
                 </div>
             </div>
 
            </form>
         </div>
+    
     </div>
 </div>
 </div>

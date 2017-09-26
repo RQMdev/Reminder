@@ -60,31 +60,17 @@ class Sticky extends Component {
 
   render() {
     return (
-      <div className="sticky">
-        <div className="title">{this.props.sticky.title}</div>
-        <div className="content">{this.props.sticky.content}</div>
-        <div className="priority">{this.props.sticky.priority}</div>
-				<a href="#" onClick={this.deleteSticky.bind(this, this.props.sticky)}>X</a>
-				<form onSubmit={this.handleSubmit.bind(this)}>
-          <ul>
-            <li>
-              <label>Title</label><br />
-              <input type="text" ref="title" value={this.state.updatedSticky.title} onChange={this.handleChangeTitle.bind(this)}/>
-            </li>
-            <li>
-              <label>Content</label><br />
-              <input type="text" ref="content" value={this.state.updatedSticky.content} onChange={this.handleChangeContent.bind(this)}/>
-            </li>
-            <li>
-              <label>Priority</label><br />
-              <input type="number" ref="priority" value={this.state.updatedSticky.priority} onChange={this.handleChangePriority.bind(this)}/>
-            </li>
-            <li>
-              <input type="submit" value="Submit" />
-            </li>
-          </ul>
-        </form>
-      </div>
+			 <div className="col l4 m6 s12 ">
+        <div className="sticky z-depth-3">
+             <div className="sticky-header sticky z-depth-3">
+                   <h3 className="sticky-title flow-text">{this.props.sticky.title}</h3>
+                        <a href="" ><i className="large material-icons">edit</i></a>
+
+                        <a href="" onClick={this.deleteSticky.bind(this, this.props.sticky)}><i className="large material-icons ">close</i></a>
+                    </div>
+                    <p className="sticky-texte flow-text">{this.props.sticky.content}</p>
+                </div>
+								</div>
     );
   }
 }

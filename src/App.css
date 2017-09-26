@@ -122,6 +122,59 @@ nav .brand-logo i {
 }
 
 
+/*========================== 03. STICKY ==========================++++++++++*/
+
+.sticky {
+    margin: 0 auto;
+    background-color: #E0E0E0;
+    width: 260px;
+    margin-bottom: 20px;
+}
+
+.sticky-bloc {
+    margin-top: 50px;
+}
+
+.sticky-header {
+    background-color: #e03939;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.sticky-title {
+    font-size: 1.1em;
+    padding-top: 5px;
+    color: #fff;
+    display: inline-block;
+    margin: 13px;
+}
+
+.sticky-texte {
+    padding-left: 18px;
+    padding-right: 18px;
+    font-size: 1em;
+    padding-top: 5px;
+    padding-bottom: 15px;
+    color: black;
+}
+
+.sticky i {
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+.btn-add {
+    margin-top: 30px;
+    margin-left: 45%;
+}
+
+.btn-floating {
+    background-color: #F55C54;
+}
+
+
 /*========================== 04. FOOTER ==========================++++++++++*/
 
 .page-footer {
