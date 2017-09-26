@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 class SignIn extends Component {
+  
   constructor(){
     super();
     this.state = {
@@ -20,7 +21,10 @@ class SignIn extends Component {
 
   render() {
     return (
+
       <div className="sign-in">
+
+
         <h2>SIGN IN FORM</h2>
         <form onSubmit={this.handleSubmit.bind(this)}>
           <ul>
