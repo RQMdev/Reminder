@@ -11,6 +11,10 @@
         background-size: cover;
     }
     
+    #root {
+        min-height: 70vh;
+    }
+    
     h3 {
         font-size: 2em;
     }
@@ -60,6 +64,10 @@
     
     nav .brand-logo i {
         font-size: 1.5em;
+    }
+    
+    nav i {
+        margin-right: 20px;
     }
     /*========================== 02. FORMULAIRES ==========================++++++++++*/
     
