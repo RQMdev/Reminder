@@ -16,6 +16,24 @@ class App extends Component {
     }
   }
 
+	componentWillMount(){
+
+  }
+
+	componentDidMount = async () => {
+		if(localStorage.getItem('token')){
+			let token =  await localStorage.getItem('token');
+			console.log(token);
+			this.setState({token});
+			console.log(this.state);
+			this.getStickys();
+		}
+
+    if (this.state.token == '' && this.props.location.pathname === '/'){
+    this.props.history.push('/signin');
+    }
+	}
+
   handleAddNewUser(user){
     console.log('User = ',user);
 		this.cleanErrorInState();
@@ -26,6 +44,7 @@ class App extends Component {
       dataType: 'json',
       data: JSON.stringify(user),
       success: function(data){
+				localStorage.setItem('token', data.token);
         this.setState({token: data.token});
         if (this.state.token !== ''){
         this.props.history.push('/');
@@ -52,6 +71,7 @@ class App extends Component {
       dataType: 'json',
       data: JSON.stringify(user),
       success: function(data){
+				localStorage.setItem('token', data.token);
         this.setState({token: data.token});
         if (this.state.token !== ''){
         this.props.history.push('/');
@@ -66,12 +86,6 @@ class App extends Component {
 				this.addErrorToState(xhr);
       }.bind(this)
     });
-  }
-
-  componentWillMount(){
-    if (this.state.token === '' && this.props.location.pathname === '/'){
-    this.props.history.push('/signin');
-    }
   }
 
   getStickys(){
