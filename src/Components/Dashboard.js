@@ -38,7 +38,7 @@ class Dashboard extends Component {
     if (this.props.stickys){
       stickys = this.props.stickys.map(sticky => {
         return (
-          <Sticky updateSticky={this.onUpdate.bind(this)} onDelete={this.deleteSticky.bind(this)} key={sticky._id} sticky={sticky} />
+          <Sticky updateSticky={this.onUpdate.bind(this)} onDelete={this.deleteSticky.bind(this)} key={sticky._id} sticky={sticky} error={this.props.error}/>
         );
       });
     }
@@ -50,7 +50,7 @@ class Dashboard extends Component {
      <a className="align-center btn-addSticky btn-floating btn-large waves-effect waves-light red" onClick={this.toggleFormAddSticky}><i id="add-close-sticky"className="material-icons">add</i></a>
 
      </div>
-  
+
    <div className="row">
            <AddSticky addNewSticky={this.handleAddNewSticky.bind(this)} error={this.props.error}/>
            {stickys}
