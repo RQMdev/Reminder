@@ -264,6 +264,11 @@
         text-align: center;
     }
     
+    .form-edit-sticky li {
+        margin-right: 10%;
+        margin-left: 10%;
+    }
+    
     .form-edit-sticky h1 {
         font-size: 1.9em;
         padding-top: 20px;
