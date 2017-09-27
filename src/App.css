@@ -175,7 +175,12 @@
     }
     
     .form-add-sticky {
+        display: none;
         background-color: #E0E0E0;
+    }
+    
+    .form-add-sticky i {
+        color: #e03939;
     }
     
     .sticky-bloc {

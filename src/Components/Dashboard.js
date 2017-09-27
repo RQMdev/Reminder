@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import $ from 'jquery';
 import Sticky from './Sticky';
 import AddSticky from './AddSticky';
+
 
 class Dashboard extends Component {
 	onUpdate(updatedSticky){
@@ -14,6 +16,12 @@ class Dashboard extends Component {
   handleAddNewSticky(newSticky){
     this.props.addNewSticky(newSticky);
   }
+  
+  showFormAddSticky(){
+    $('.form-add-sticky').toggle();
+  }
+
+  
 
   render() {
 
@@ -29,14 +37,18 @@ class Dashboard extends Component {
       <div>
 
    <div className="sticky-bloc container">
-   <a className="align-center btn-addSticky btn-floating btn-large waves-effect waves-light red"><i className="material-icons">add</i></a>
+   <a className="align-center btn-addSticky btn-floating btn-large waves-effect waves-light red" onClick={this.showFormAddSticky}><i className="material-icons">add</i></a>
    <div className="row">
            <AddSticky addNewSticky={this.handleAddNewSticky.bind(this)} error={this.props.error}/>
            {stickys}
        </div>
 
    </div>
+   
+
+
    </div>
+
 
     );
   }
