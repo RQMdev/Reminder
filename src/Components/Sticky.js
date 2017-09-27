@@ -69,14 +69,14 @@ class Sticky extends Component {
         <div className="sticky z-depth-3">
              <div className="sticky-header sticky z-depth-3">
                    <h3 className="sticky-title flow-text">{this.props.sticky.title}</h3>
-                        <a onClick={this.toggleFormEditSticky} href="" ><i className="large material-icons waves-effect waves-light">edit</i></a>
+                        <a onClick={this.toggleFormEditSticky}><i className="large material-icons waves-effect waves-light">edit</i></a>
 
                         <a href="" onClick={this.deleteSticky.bind(this, this.props.sticky)}><i className="large material-icons waves-effect waves-light ">close</i></a>
                     </div>
                     <p className="sticky-texte flow-text">{this.props.sticky.content}</p>
                 </div>
 
-				
+
 			<form className="sticky form-edit-sticky z-depth-3"onSubmit={this.handleSubmit.bind(this)}>
            <ul>
 		   <h1 className="center flow-text">Modifier</h1>
@@ -100,7 +100,7 @@ class Sticky extends Component {
 
 
 
-		
+
 	</div>
     );
   }
