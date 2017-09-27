@@ -196,6 +196,8 @@ class App extends Component {
 	}
 
 	addErrorToState(xhr){
+
+		let state = this.state;
 		let error;
 		if (xhr.responseJSON){
 			if (xhr.responseJSON.details){
@@ -205,9 +207,8 @@ class App extends Component {
 			}
 		} else if (xhr.responseText){
 			error = xhr.responseText;
+			state.token = '';
 		}
-
-		let state = this.state;
 		state.error = [error];
 		this.setState(state);
 	}
