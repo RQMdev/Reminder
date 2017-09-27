@@ -46,7 +46,11 @@ class Dashboard extends Component {
       <div>
 
    <div className="sticky-bloc container">
-   <a className="align-center btn-addSticky btn-floating btn-large waves-effect waves-light red" onClick={this.toggleFormAddSticky}><i id="add-close-sticky"className="material-icons">add</i></a>
+     <div className="center-align bouton-add">
+     <a className="align-center btn-addSticky btn-floating btn-large waves-effect waves-light red" onClick={this.toggleFormAddSticky}><i id="add-close-sticky"className="material-icons">add</i></a>
+
+     </div>
+  
    <div className="row">
            <AddSticky addNewSticky={this.handleAddNewSticky.bind(this)} error={this.props.error}/>
            {stickys}
