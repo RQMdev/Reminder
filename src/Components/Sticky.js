@@ -60,7 +60,7 @@ class Sticky extends Component {
 	}
 
 	toggleFormEditSticky(){
-		$('.form-edit-sticky').toggle();
+		$(this.refs.formEdit).toggle();
 	}
 
   render() {
@@ -69,7 +69,7 @@ class Sticky extends Component {
         <div className="sticky z-depth-3">
              <div className="sticky-header sticky z-depth-3">
                    <h3 className="sticky-title flow-text">{this.props.sticky.title}</h3>
-                        <a onClick={this.toggleFormEditSticky}><i className="large material-icons waves-effect waves-light">edit</i></a>
+                        <a onClick={this.toggleFormEditSticky.bind(this)}><i className="large material-icons waves-effect waves-light">edit</i></a>
 
                         <a href="" onClick={this.deleteSticky.bind(this, this.props.sticky)}><i className="large material-icons waves-effect waves-light ">close</i></a>
                     </div>
@@ -77,7 +77,7 @@ class Sticky extends Component {
                 </div>
 
 
-			<form className="sticky form-edit-sticky z-depth-3"onSubmit={this.handleSubmit.bind(this)}>
+			<form className="sticky form-edit-sticky z-depth-3" ref="formEdit" onSubmit={this.handleSubmit.bind(this)}>
            <ul>
 		   <h1 className="flow-text">Modifier</h1>
             <li>
