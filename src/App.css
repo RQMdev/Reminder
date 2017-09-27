@@ -183,6 +183,10 @@
     .btn-floating {
         background-color: #F55C54;
     }
+    
+    .btn-addSticky {
+        margin-bottom: 20px;
+    }
     /*========================== 04. FOOTER ==========================++++++++++*/
     
     .page-footer {
