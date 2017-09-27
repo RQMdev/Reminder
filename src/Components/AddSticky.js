@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import $ from 'jquery';
+
 import Error from './Error';
 class AddSticky extends Component {
   constructor(){
@@ -37,14 +37,14 @@ class AddSticky extends Component {
 	       <h1 className="flow-text">Ajouter un sticky</h1>
 	       <div className="input-field col s12">
 	         <input id="titre" type="text" className="validate" ref="title" />
-	         <label forHtml="titre" >Titre</label>
+	         <label htmlFor="titre" >Titre</label>
 	       </div>
 	       <div className="input-field col s12">
 	         <input id="content" type="text" className="validate" ref="content"/>
-	         <label forHtml="email" >Contenu</label>
+	         <label htmlFor="email" >Contenu</label>
 	       </div>
 	       <div className="input-field col s12">
-	       <label forHtml="priority">Priority</label><br />
+	       <label htmlFor="priority">Priority</label><br />
 	       <input type="number" ref="priority" />
 	       {errors}
 	       <input className=" btn-addSticky btn waves-effect waves-light col s6 offset-s3"type="submit" value="Ajouter" />

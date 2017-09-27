@@ -230,6 +230,24 @@
     .btn-addSticky {
         margin-bottom: 20px;
     }
+    
+    .form-edit-sticky {
+        display: none;
+    }
+    
+    .form-edit-sticky h1 {
+        font-size: 1.9em;
+        padding-top: 20px;
+    }
+    
+    .form-edit-sticky label {
+        color: black;
+    }
+    
+    label.active {
+        color: black;
+        font-size: 1.1em;
+    }
     /*========================== 04. FOOTER ==========================++++++++++*/
     
     .page-footer {
