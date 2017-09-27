@@ -34,18 +34,19 @@ class SignIn extends Component {
     return (
     <div>
      
-      <div className="intro container z-depth-3">
+      <div className="intro container z-depth-3"> 
         
         <div className="row">
 
-         <div className="col l6">
+         <div className="col l6 col l6 m8 offset-m2">
 
-            <h1 className="flow-text center-align">Révolutionner le monde des penses bêtes</h1>
+            <h1 className="center-align flow-text">Notre concept</h1>
       
-                      <ul className="center-align flow-text">
-                          <li>Une inscription rapide</li>
-                          <li>Une application gratuite</li>
-                          <li>Accessible sur tous vos supports</li>
+                      <ul className="center-align flow-text ">
+                          <li>Reminder, l'application de penses-bêtes</li> 
+                          <li>Une inscription gratuite</li>
+                          <li>Une prise en main rapide </li>
+                          <li>Accessible sur tous vos supports </li>
                           <li><a className="waves-effect waves-light btn btn-intro "> <Link to="/signup">Créer un compte maintenant </Link> </a></li>
                       </ul>
         </div>
