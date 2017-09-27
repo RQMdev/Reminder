@@ -97,6 +97,10 @@ nav .brand-logo i {
     margin-top: 20px !important;
 }
 
+.btn-intro a {
+    color: #fff;
+}
+
 .form-login-btn {
     margin-top: -23px;
 }
@@ -119,6 +123,10 @@ nav .brand-logo i {
 
 .label-form-register {
     padding-left: 5%;
+}
+
+.form-login-btn a {
+    color: #fff;
 }
 
 
