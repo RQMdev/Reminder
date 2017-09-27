@@ -4,6 +4,7 @@ import $ from 'jquery';
 import Dashboard from './Components/Dashboard';
 import SignIn from './Components/SignIn';
 import SignUp from './Components/SignUp';
+import Header from './Components/Header';
 import './App.css';
 
 
@@ -216,6 +217,7 @@ class App extends Component {
   render() {
     return (
         <div className='app'>
+					<Header />
           <Route  path="/signin" render={
             ()=><SignIn authUser={this.handleAuthUser.bind(this)} error={this.state.error}/>
           }/>
