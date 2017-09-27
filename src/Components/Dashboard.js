@@ -16,17 +16,21 @@ class Dashboard extends Component {
   handleAddNewSticky(newSticky){
     this.props.addNewSticky(newSticky);
   }
-  
+
   toggleFormAddSticky(){
     $('.form-add-sticky').toggle();
     if ( $('#add-close-sticky').html()=== "add"){
-      $('#add-close-sticky').html("close");  
+      $('#add-close-sticky').html("close");
     }else if( $('#add-close-sticky').html()=== "close"){
-      $('#add-close-sticky').html("add");  
+      $('#add-close-sticky').html("add");
     }
   }
 
-  
+  componentDidMount(){
+		if (!this.props.stickys){
+			this.toggleFormAddSticky();
+		}
+	}
 
   render() {
 
@@ -49,7 +53,7 @@ class Dashboard extends Component {
        </div>
 
    </div>
-   
+
 
 
    </div>
