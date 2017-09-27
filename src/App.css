@@ -278,7 +278,12 @@
         color: black;
     }
     
-    label.active {
+    .form-login label.active {
+        color: #1d7d74;
+        font-size: 1.8em;
+    }
+    
+    .form-add-sticky label.active {
         color: #1d7d74;
         font-size: 1.8em;
     }
