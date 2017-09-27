@@ -50,7 +50,7 @@ class SignIn extends Component {
                       </ul>
         </div>
 
-          <div className="col l6">
+          <div className="col l6 col l6 m8 offset-m2">
        <div className="sign-in">
          <div className="form-login  z-depth-3 row">
           <img className="responsive-img logo-form" src="images/logo-min.png" alt="" />
