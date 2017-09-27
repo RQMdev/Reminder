@@ -20,16 +20,17 @@ class AddSticky extends Component {
       this.props.addNewSticky(this.state.newSticky);
     });
 	}
-	
+
   render() {
     let errors;
-    	if (this.props.error){
-    		errors = this.props.error.map(error => {
-    			return(
-    				<Error key={error} error={error}/>
-    			);
-    		});
-    		}
+  	if (this.props.error){
+  		errors = this.props.error.map(error => {
+  			return(
+  				<Error key={error} error={error}/>
+  			);
+  		});
+  	}
+
     return (
    <div className="row">
 	   <form onSubmit={this.handleSubmit.bind(this)} className="form-add-sticky col l4 m5 offset-l4 offset-m4 z-depth-4">

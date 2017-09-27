@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Error from './Error';
 import $ from 'jquery';
 
 class Sticky extends Component {
@@ -64,6 +65,16 @@ class Sticky extends Component {
 	}
 
   render() {
+
+		let errors;
+  	if (this.props.error){
+  		errors = this.props.error.map(error => {
+  			return(
+  				<Error key={error} error={error}/>
+  			);
+  		});
+  	}
+
     return (
 			 <div className="col l4 m6 s12 ">
         <div className="sticky z-depth-3">
@@ -79,11 +90,11 @@ class Sticky extends Component {
 
 			<form className="sticky form-edit-sticky z-depth-3" ref="formEdit" onSubmit={this.handleSubmit.bind(this)}>
            <ul>
-		   <h1 className="center flow-text">Modifier</h1>
+		   	 		 <h1 className="center flow-text">Modifier</h1>
             <li>
-               <label>Title</label><br />
-               <input type="text" ref="title" value={this.state.updatedSticky.title} onChange={this.handleChangeTitle.bind(this)}/>
-             </li>
+	           <label>Title</label><br />
+	           <input type="text" ref="title" value={this.state.updatedSticky.title} onChange={this.handleChangeTitle.bind(this)}/>
+            </li>
             <li>
              <label>Content</label><br />
                <input type="text" ref="content" value={this.state.updatedSticky.content} onChange={this.handleChangeContent.bind(this)}/>
@@ -93,6 +104,7 @@ class Sticky extends Component {
               <input type="number" ref="priority" value={this.state.updatedSticky.priority} onChange={this.handleChangePriority.bind(this)}/>
              </li>
              <li>
+							 {errors}
                <input className="btn-addSticky btn waves-effect waves-light"type="submit" value="Modifier" />
              </li>
          </ul>
