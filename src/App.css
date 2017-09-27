@@ -1,212 +1,208 @@
-.app {
-    text-align: center;
-}
-
-li {
-    list-style-type: none;
-}
-
-body {
-    background-image: url('background.jpg');
-    background-size: cover;
-}
-
-
-/*========================== 02. MENU ==========================++++++++++*/
-
-nav .nav-wrapper {
-    background-color: #333333 !important;
-    box-shadow: 0 2px 5px rgba(32, 1, 1, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
-}
-
-nav .brand-logo {
-    color: #fafafa;
-    font-size: 2.4em;
-    font-family: "Pacifico";
-}
-
-.brand-logo {
-    height: 1em;
-    margin-top: 17px;
-    margin-left: 10px;
-}
-
-nav .brand-logo i {
-    font-size: 1.5em;
-}
-
-
-/*========================== 02. FORMULAIRES ==========================++++++++++*/
-
-.form-login {
-    margin-top: 1.2em;
-    background-color: #E0E0E0;
-    display: inline-block;
-    padding: 30px 15px 0px 15px;
-    border: 1px solid #EEE;
-}
-
-.logo-form {
-    margin-top: 5px;
-    position: relative;
-    height: 110px !important;
-}
-
-.logo-form-login {
-    margin-left: 30%;
-    margin-right: 20%;
-    position: relative;
-    height: 110px !important;
-}
-
-.input-field input[type=date]:focus+label,
-.input-field input[type=text]:focus+label,
-.input-field input[type=email]:focus+label,
-.input-field input[type=password]:focus+label {
-    color: #e91e63;
-}
-
-.input-field input[type=date]:focus,
-.input-field input[type=text]:focus,
-.input-field input[type=email]:focus,
-.input-field input[type=password]:focus {
-    border-bottom: 2px solid #e91e63;
-    box-shadow: none;
-}
-
-.intro {
-    background-color: rgba(189, 189, 189, 0.5);
-    margin-top: 20px;
-    padding-left: 30px;
-    padding-right: 30px;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-}
-
-.intro h1 {
-    font-size: 2em;
-    font-style: bold;
-    padding-top: 100px;
-}
-
-.intro li {
-    font-size: 0.8em;
-}
-
-.intro a {
-    color:#fff;
-}
-
-.btn-intro {
-    margin-top: 20px !important;
-}
-
-.form-login-btn {
-    margin-top: -23px;
-}
-
-.postit-logo {
-    max-height: 160px;
-    margin-left: 40%;
-    margin-right: 30%;
-}
-
-.form-register {
-    margin-top: 40px;
-}
-
-.input-field .prefix {
-    position: absolute;
-    width: 3rem;
-    padding-left: 0.5em;
-}
-
-.label-form-register {
-    padding-left: 5%;
-}
-
-.form-login-btn{
-    background-color: #F55D50;
-}
-
-
-/*========================== 03. STICKY ==========================++++++++++*/
-
-.sticky {
-    margin: 0 auto;
-    background-color: #E0E0E0;
-    width: 260px;
-    margin-bottom: 20px;
-}
-
-.form-add-sticky {
-    background-color: #E0E0E0 ;
-}
-
-.sticky-bloc {
-    margin-top: 50px;
-}
-
-.sticky-header {
-    background-color: #e03939;
-    height: 50px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.sticky-title {
-    font-size: 1.1em;
-    padding-top: 5px;
-    color: #fff;
-    display: inline-block;
-    margin: 13px;
-}
-
-.sticky-texte {
-    padding-left: 18px;
-    padding-right: 18px;
-    font-size: 1em;
-    padding-top: 5px;
-    padding-bottom: 15px;
-    color: black;
-}
-
-.sticky i {
-    font-size: 1.8rem;
-    color: #fff;
-}
-
-.btn-add {
-    margin-top: 30px;
-    margin-left: 45%;
-}
-
-.btn-floating {
-    background-color: #F55C54;
-}
-
-
-/*========================== 04. FOOTER ==========================++++++++++*/
-
-.page-footer {
-    color: #fff;
-    background-color: #333;
-    text-align: center;
-}
-
-.page-footer .footer-copyright {
-    background-color: #F55C54;
-    font-weight: 300;
-    text-align: center;
-}
-
-.fa {
-    font-size: 40px;
-    padding: 10px;
-    color:#FFF;
-}
-
-.page-footer a:hover {
-    color: #9C9C9C;
-}
+    .app {
+        text-align: center;
+    }
+    
+    li {
+        list-style-type: none;
+    }
+    
+    body {
+        background-image: url('background.jpg');
+        background-size: cover;
+    }
+    /*========================== 02. MENU ==========================++++++++++*/
+    
+    nav .nav-wrapper {
+        background-color: #333333 !important;
+        box-shadow: 0 2px 5px rgba(32, 1, 1, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+    }
+    
+    nav .brand-logo {
+        color: #fafafa;
+        font-size: 2.4em;
+        font-family: "Pacifico";
+    }
+    
+    .brand-logo {
+        height: 1em;
+        margin-top: 17px;
+        margin-left: 10px;
+    }
+    
+    nav .brand-logo i {
+        font-size: 1.5em;
+    }
+    /*========================== 02. FORMULAIRES ==========================++++++++++*/
+    
+    .form-login {
+        margin-top: 1.2em;
+        background-color: #E0E0E0;
+        display: inline-block;
+        padding: 30px 15px 0px 15px;
+        border: 1px solid #EEE;
+    }
+    
+    .logo-form {
+        margin-top: 5px;
+        position: relative;
+        height: 110px !important;
+    }
+    
+    .logo-form-login {
+        margin-left: 30%;
+        margin-right: 20%;
+        position: relative;
+        height: 110px !important;
+    }
+    
+    .input-field input[type=date]:focus+label,
+    .input-field input[type=text]:focus+label,
+    .input-field input[type=email]:focus+label,
+    .input-field input[type=password]:focus+label {
+        color: #e91e63;
+    }
+    
+    .input-field input[type=date]:focus,
+    .input-field input[type=text]:focus,
+    .input-field input[type=email]:focus,
+    .input-field input[type=password]:focus {
+        border-bottom: 2px solid #e91e63;
+        box-shadow: none;
+    }
+    
+    .intro {
+        background-color: rgba(189, 189, 189, 0.5);
+        margin-top: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+    }
+    
+    .intro h1 {
+        font-size: 2em;
+        font-style: bold;
+        padding-top: 100px;
+    }
+    
+    .intro li {
+        font-size: 0.8em;
+    }
+    
+    .intro a {
+        color: #fff;
+    }
+    
+    .btn-intro {
+        margin-top: 20px !important;
+    }
+    
+    .btn-intro a {
+        color: #fff;
+    }
+    
+    .form-login-btn {
+        margin-top: -23px;
+    }
+    
+    .postit-logo {
+        max-height: 160px;
+        margin-left: 40%;
+        margin-right: 30%;
+    }
+    
+    .form-register {
+        margin-top: 40px;
+    }
+    
+    .input-field .prefix {
+        position: absolute;
+        width: 3rem;
+        padding-left: 0.5em;
+    }
+    
+    .label-form-register {
+        padding-left: 5%;
+    }
+    
+    .form-login-btn a {
+        color: #fff;
+    }
+    /*========================== 03. STICKY ==========================++++++++++*/
+    
+    .sticky {
+        margin: 0 auto;
+        background-color: #E0E0E0;
+        width: 260px;
+        margin-bottom: 20px;
+    }
+    
+    .form-add-sticky {
+        background-color: #E0E0E0;
+    }
+    
+    .sticky-bloc {
+        margin-top: 50px;
+    }
+    
+    .sticky-header {
+        background-color: #e03939;
+        height: 50px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .sticky-title {
+        font-size: 1.1em;
+        padding-top: 5px;
+        color: #fff;
+        display: inline-block;
+        margin: 13px;
+    }
+    
+    .sticky-texte {
+        padding-left: 18px;
+        padding-right: 18px;
+        font-size: 1em;
+        padding-top: 5px;
+        padding-bottom: 15px;
+        color: black;
+    }
+    
+    .sticky i {
+        font-size: 1.8rem;
+        color: #fff;
+    }
+    
+    .btn-add {
+        margin-top: 30px;
+        margin-left: 45%;
+    }
+    
+    .btn-floating {
+        background-color: #F55C54;
+    }
+    /*========================== 04. FOOTER ==========================++++++++++*/
+    
+    .page-footer {
+        color: #fff;
+        background-color: #333;
+        text-align: center;
+    }
+    
+    .page-footer .footer-copyright {
+        background-color: #F55C54;
+        font-weight: 300;
+        text-align: center;
+    }
+    
+    .fa {
+        font-size: 40px;
+        padding: 10px;
+        color: #FFF;
+    }
+    
+    .page-footer a:hover {
+        color: #9C9C9C;
+    }
