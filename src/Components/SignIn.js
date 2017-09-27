@@ -40,7 +40,7 @@ class SignIn extends Component {
 
          <div className="col l6">
 
-            <h1 className="flow-text center-align">Révolutionner le monde des penses bếtes</h1>
+            <h1 className="flow-text center-align">Révolutionner le monde des penses bêtes</h1>
       
                       <ul className="center-align flow-text">
                           <li>Une inscription rapide</li>
@@ -61,14 +61,14 @@ class SignIn extends Component {
           <ul>
             <li>
               <div className="input-field col s12">
-                <label>Entrer votre adresse email</label><br />
+                <label>Username ou adresse email </label><br />
                 <input type="text" ref="email" />
               </div>
             </li>
             <li>
               <div className="input-field col s12">
                 <label>Entrer votre mot de passe </label><br />
-                <input type="text" ref="password" />
+                <input type="password" ref="password" />
               </div>
             </li>
 
@@ -79,7 +79,7 @@ class SignIn extends Component {
             <li>
 							{errors}
               <div className="row">
-                    <button type='submit' name='btn_login' className="col s12 btn btn-large waves-effect form-login-btn indigo"><Link to="/dashboard">Se connecter</Link></button>
+                    <button type='submit' name='btn_login' className="col s12 btn btn-large waves-effect form-login-btn"><Link to="/dashboard">Se connecter</Link></button>
               </div>
               
             </li>
