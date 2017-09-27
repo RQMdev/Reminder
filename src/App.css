@@ -11,6 +11,25 @@
         background-size: cover;
     }
 
+    h3 {
+    font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.3em;
+        font-style: bold;
+    }
+
+    h1 {
+        font-size: 1.5em;
+        font-style: bold;
+    }
+
+    h4 {
+        font-size: 2.28rem;
+        line-height: 110%;
+        margin: 0.1em 0 0.912rem 0;
+    }
 
     .error {
         border-radius: 4px;
@@ -18,6 +37,7 @@
         border: 1px solid #eb5a46;
         display: inline-block;
         padding: 0.5em;
+        margin: 1em;
     }
 
     /*========================== 02. MENU ==========================++++++++++*/
@@ -111,10 +131,6 @@
         color: #fff;
     }
     
-    .form-login-btn {
-        margin-top: -23px;
-    }
-    
     .postit-logo {
         max-height: 160px;
         margin-left: 40%;
@@ -138,6 +154,17 @@
     .form-login-btn a {
         color: #fff;
     }
+
+    .forgot {
+        color: rgba(0,0,0,0.87);
+        text-decoration: underline;
+        font-size: 12px;
+    }
+
+    .forgot a {
+        color:#9e9e9e;
+    }
+
     /*========================== 03. STICKY ==========================++++++++++*/
     
     .sticky {

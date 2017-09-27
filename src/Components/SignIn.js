@@ -50,7 +50,7 @@ class SignIn extends Component {
                       </ul>
         </div>
 
-          <div className="col l6 col l6 m8 offset-m2">
+      <div className="col l6 col l6 m8 offset-m2">
        <div className="sign-in">
          <div className="form-login  z-depth-3 row">
           <img className="responsive-img logo-form" src="images/logo-min.png" alt="" />
@@ -72,17 +72,17 @@ class SignIn extends Component {
               </div>
             </li>
 
-            <li> 
-                  <label className="forgot">Mot de passe oublié? </label>
-            </li>
-           
             <li>
 							{errors}
               <div className="row">
-                    <button type='submit' name='btn_login' className="col s12 btn btn-large waves-effect form-login-btn"><Link to="/dashboard">Se connecter</Link></button>
+                    <button type='submit' name='btn_login' className="col s12 btn waves-effect form-login-btn">Se connecter</button>
               </div>
-              
             </li>
+
+            <li> 
+                  <label className="forgot"> <Link to="/signup">Mot de passe oublié ? </Link></label>
+            </li>
+
           </ul>
         </form>
 
