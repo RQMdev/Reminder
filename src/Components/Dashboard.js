@@ -17,8 +17,13 @@ class Dashboard extends Component {
     this.props.addNewSticky(newSticky);
   }
   
-  showFormAddSticky(){
+  toggleFormAddSticky(){
     $('.form-add-sticky').toggle();
+    if ( $('#add-close-sticky').html()=== "add"){
+      $('#add-close-sticky').html("close");  
+    }else if( $('#add-close-sticky').html()=== "close"){
+      $('#add-close-sticky').html("add");  
+    }
   }
 
   
@@ -37,7 +42,7 @@ class Dashboard extends Component {
       <div>
 
    <div className="sticky-bloc container">
-   <a className="align-center btn-addSticky btn-floating btn-large waves-effect waves-light red" onClick={this.showFormAddSticky}><i className="material-icons">add</i></a>
+   <a className="align-center btn-addSticky btn-floating btn-large waves-effect waves-light red" onClick={this.toggleFormAddSticky}><i id="add-close-sticky"className="material-icons">add</i></a>
    <div className="row">
            <AddSticky addNewSticky={this.handleAddNewSticky.bind(this)} error={this.props.error}/>
            {stickys}
