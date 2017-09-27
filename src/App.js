@@ -90,6 +90,13 @@ class App extends Component {
     });
   }
 
+	handleSignOut(){
+		let state = this.state;
+		state.token = '';
+		this.setState(state);
+		this.props.history.push('/signin');
+	}
+
   getStickys(){
     $.ajax({
       type: 'GET',
@@ -217,7 +224,7 @@ class App extends Component {
   render() {
     return (
         <div className='app'>
-					<Header />
+					<Header signOut={this.handleSignOut.bind(this)}/>
           <Route  path="/signin" render={
             ()=><SignIn authUser={this.handleAuthUser.bind(this)} error={this.state.error}/>
           }/>
