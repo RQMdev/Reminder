@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import $ from 'jquery';
 
 class Sticky extends Component {
 	constructor(){
@@ -58,38 +59,49 @@ class Sticky extends Component {
 		this.props.onDelete(sticky);
 	}
 
+	toggleFormEditSticky(){
+		$('.form-edit-sticky').toggle();
+	}
+
   render() {
     return (
 			 <div className="col l4 m6 s12 ">
         <div className="sticky z-depth-3">
              <div className="sticky-header sticky z-depth-3">
                    <h3 className="sticky-title flow-text">{this.props.sticky.title}</h3>
-                        <a href="" ><i className="large material-icons">edit</i></a>
+                        <a onClick={this.toggleFormEditSticky} href="" ><i className="large material-icons waves-effect waves-light">edit</i></a>
 
-                        <a href="" onClick={this.deleteSticky.bind(this, this.props.sticky)}><i className="large material-icons ">close</i></a>
+                        <a href="" onClick={this.deleteSticky.bind(this, this.props.sticky)}><i className="large material-icons waves-effect waves-light ">close</i></a>
                     </div>
                     <p className="sticky-texte flow-text">{this.props.sticky.content}</p>
                 </div>
-								<form onSubmit={this.handleSubmit.bind(this)}>
- -          <ul>
- -            <li>
- -              <label>Title</label><br />
- -              <input type="text" ref="title" value={this.state.updatedSticky.title} onChange={this.handleChangeTitle.bind(this)}/>
- -            </li>
- -            <li>
- -              <label>Content</label><br />
- -              <input type="text" ref="content" value={this.state.updatedSticky.content} onChange={this.handleChangeContent.bind(this)}/>
- -            </li>
- -            <li>
- -              <label>Priority</label><br />
- -              <input type="number" ref="priority" value={this.state.updatedSticky.priority} onChange={this.handleChangePriority.bind(this)}/>
- -            </li>
- -            <li>
- -              <input type="submit" value="Submit" />
- -            </li>
- -          </ul>
- -        </form>
-								</div>
+
+				
+			<form className="sticky form-edit-sticky z-depth-3"onSubmit={this.handleSubmit.bind(this)}>
+           <ul>
+		   <h1 className="flow-text">Modifier</h1>
+            <li>
+               <label>Title</label><br />
+               <input type="text" ref="title" value={this.state.updatedSticky.title} onChange={this.handleChangeTitle.bind(this)}/>
+             </li>
+            <li>
+             <label>Content</label><br />
+               <input type="text" ref="content" value={this.state.updatedSticky.content} onChange={this.handleChangeContent.bind(this)}/>
+            </li>
+            <li>
+               <label>Priority</label><br />
+              <input type="number" ref="priority" value={this.state.updatedSticky.priority} onChange={this.handleChangePriority.bind(this)}/>
+             </li>
+             <li>
+               <input className="btn-addSticky btn waves-effect waves-light"type="submit" value="Modifier" />
+             </li>
+         </ul>
+        </form>
+
+
+
+		
+	</div>
     );
   }
 }

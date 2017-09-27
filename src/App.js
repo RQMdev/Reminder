@@ -4,6 +4,7 @@ import $ from 'jquery';
 import Dashboard from './Components/Dashboard';
 import SignIn from './Components/SignIn';
 import SignUp from './Components/SignUp';
+import Header from './Components/Header';
 import './App.css';
 
 
@@ -88,6 +89,13 @@ class App extends Component {
       }.bind(this)
     });
   }
+
+	handleSignOut(){
+		let state = this.state;
+		state.token = '';
+		this.setState(state);
+		this.props.history.push('/signin');
+	}
 
   getStickys(){
     $.ajax({
@@ -196,6 +204,8 @@ class App extends Component {
 	}
 
 	addErrorToState(xhr){
+
+		let state = this.state;
 		let error;
 		if (xhr.responseJSON){
 			if (xhr.responseJSON.details){
@@ -205,9 +215,8 @@ class App extends Component {
 			}
 		} else if (xhr.responseText){
 			error = xhr.responseText;
+			state.token = '';
 		}
-
-		let state = this.state;
 		state.error = [error];
 		this.setState(state);
 	}
@@ -215,6 +224,7 @@ class App extends Component {
   render() {
     return (
         <div className='app'>
+					<Header signOut={this.handleSignOut.bind(this)}/>
           <Route  path="/signin" render={
             ()=><SignIn authUser={this.handleAuthUser.bind(this)} error={this.state.error}/>
           }/>
