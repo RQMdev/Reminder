@@ -34,7 +34,7 @@ class AddSticky extends Component {
    <div className="row">
 	   <form onSubmit={this.handleSubmit.bind(this)} className="form-add-sticky col l4 m5 offset-l4 offset-m4 z-depth-4">
 	     <div className="row">
-	       <h1 className="flow-text">Ajouter un sticky</h1>
+	       <h1 className="center flow-text">Ajouter un sticky</h1>
 	       <div className="input-field col s12">
 	         <input id="titre" type="text" className="validate" ref="title" />
 	         <label htmlFor="titre" >Titre</label>

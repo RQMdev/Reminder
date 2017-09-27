@@ -79,7 +79,7 @@ class Sticky extends Component {
 				
 			<form className="sticky form-edit-sticky z-depth-3"onSubmit={this.handleSubmit.bind(this)}>
            <ul>
-		   <h1 className="flow-text">Modifier</h1>
+		   <h1 className="center flow-text">Modifier</h1>
             <li>
                <label>Title</label><br />
                <input type="text" ref="title" value={this.state.updatedSticky.title} onChange={this.handleChangeTitle.bind(this)}/>
