@@ -10,6 +10,8 @@
     h1 {
         font-size: 1.3rem;
         font-style: bold;
+    }
+    
     #root {
         min-height: 75vh;
     }
