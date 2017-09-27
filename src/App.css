@@ -1,12 +1,12 @@
     li {
         list-style-type: none;
     }
-
+    
     body {
         background-image: url('background.jpg');
         background-size: cover;
     }
-
+    
     h1 {
         font-size: 1.3rem;
         font-style: bold;
@@ -15,18 +15,18 @@
     #root {
         min-height: 75vh;
     }
-
+    
     h3 {
         font-size: 2em;
     }
-
+    
     h2 {
         font-size: 1.3em;
         font-style: bold;
         font-weight: 300;
     }
     
-     h3 {
+    h3 {
         font-size: 2em;
     }
     
@@ -46,38 +46,38 @@
         margin: 1em;
     }
     /*========================== 02. MENU ==========================++++++++++*/
-
+    
     nav .nav-wrapper {
         background-color: #333333 !important;
         box-shadow: 0 2px 5px rgba(32, 1, 1, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
     }
-
+    
     nav .brand-logo {
-				position: relative;
+        position: relative;
         color: #fafafa;
         font-size: 2.4em;
         font-family: "Pacifico";
     }
-
+    
     .brand-logo {
         height: 1em;
         margin-top: 17px;
         margin-left: 10px;
     }
-
+    
     nav .brand-logo i {
         font-size: 1.5em;
     }
-
+    
     nav i {
         margin-right: 20px;
     }
     /*========================== 02. FORMULAIRES ==========================++++++++++*/
-		#add-close-sticky {
-			margin: 0 auto;
-		}
-
-
+    
+    #add-close-sticky {
+        margin: 0 auto;
+    }
+    
     .form-login {
         margin-top: 1.2em;
         background-color: #E0E0E0;
@@ -85,27 +85,27 @@
         padding: 30px 15px 0px 15px;
         border: 1px solid #EEE;
     }
-
+    
     .logo-form {
         margin-top: 5px;
         position: relative;
         height: 110px !important;
     }
-
+    
     .logo-form-login {
         margin-left: 30%;
         margin-right: 20%;
         position: relative;
         height: 110px !important;
     }
-
+    
     .input-field input[type=date]:focus+label,
     .input-field input[type=text]:focus+label,
     .input-field input[type=email]:focus+label,
     .input-field input[type=password]:focus+label {
         color: #e91e63;
     }
-
+    
     .input-field input[type=date]:focus,
     .input-field input[type=text]:focus,
     .input-field input[type=email]:focus,
@@ -113,7 +113,7 @@
         border-bottom: 2px solid #e91e63;
         box-shadow: none;
     }
-
+    
     .intro {
         background-color: rgba(189, 189, 189, 0.5);
         margin-top: 30px;
@@ -121,51 +121,51 @@
         padding-right: 30px;
         margin-bottom: 30px;
     }
-
+    
     .intro h1 {
         font-size: 2em;
         font-style: bold;
         padding-top: 50px;
     }
-
+    
     .intro li {
         font-size: 0.7em;
         padding-top: 15px;
         margin-left: 10px;
     }
-
+    
     .intro a {
         color: #fff;
     }
-
+    
     .btn-intro {
         margin-top: 20px !important;
     }
-
+    
     .btn-intro a {
         color: #fff;
     }
-
+    
     .postit-logo {
         max-height: 160px;
         margin-left: 40%;
         margin-right: 30%;
     }
-
+    
     .form-register {
         margin-top: 40px;
     }
-
+    
     .input-field .prefix {
         position: absolute;
         width: 3rem;
         padding-left: 0.5em;
     }
-
+    
     .label-form-register {
         padding-left: 5%;
     }
-
+    
     .form-login-btn a {
         color: #fff;
     }
@@ -187,13 +187,11 @@
         color: red;
     }
     
-
     .post-img {
         margin-top: 5px;
         height: 200px !important;
     }
-
-
+    
     i.waves-effect.waves-light.large.material-icons.closeicon {
         margin-top: -20px;
         float: right;
@@ -201,23 +199,23 @@
         color: red;
     }
     /*========================== 03. STICKY ==========================++++++++++*/
-
+    
     .sticky {
         margin: 0 auto;
         background-color: #E0E0E0;
         width: 260px;
         margin-bottom: 20px;
     }
-
+    
     .form-add-sticky {
         display: none;
         background-color: #E0E0E0;
     }
-
+    
     .sticky-bloc {
         margin-top: 50px;
     }
-
+    
     .sticky-header {
         background-color: #e03939;
         height: 50px;
@@ -225,7 +223,7 @@
         justify-content: space-around;
         align-items: center;
     }
-
+    
     .sticky-title {
         font-size: 1.1em;
         padding-top: 5px;
@@ -233,7 +231,7 @@
         display: inline-block;
         margin: 13px;
     }
-
+    
     .sticky-texte {
         padding-left: 18px;
         padding-right: 18px;
@@ -242,70 +240,70 @@
         padding-bottom: 15px;
         color: black;
     }
-
+    
     .sticky i {
         font-size: 1.8rem;
         color: #fff;
     }
-
+    
     .btn-add {
         margin-top: 30px;
         margin-left: 45%;
     }
-
+    
     .btn-floating {
         background-color: #F55C54;
     }
-
+    
     .btn-addSticky {
         margin-bottom: 20px;
     }
-
+    
     .form-edit-sticky {
         display: none;
+        text-align: center;
     }
-
+    
     .form-edit-sticky h1 {
         font-size: 1.9em;
         padding-top: 20px;
     }
-
+    
     .form-edit-sticky label {
         color: black;
     }
-
+    
     label.active {
         color: black;
         font-size: 1.1em;
     }
     /*========================== 04. FOOTER ==========================++++++++++*/
-
+    
     .page-footer {
         color: #fff;
         background-color: #333;
         text-align: center;
     }
-
+    
     .page-footer .footer-copyright {
         background-color: #F55C54;
         font-weight: 300;
         text-align: center;
     }
-
+    
     .fa {
         font-size: 40px;
         padding: 10px;
         color: #FFF;
     }
-
+    
     .page-footer a:hover {
         color: #9C9C9C;
     }
-
-		/*========================== 05. MEDIA QUERIES ==========================++++++++++*/
-
-		@media only screen and (max-width: 992px){
-			nav .brand-logo {
-				transform: translateX(-100%);
-			}
-		}
+    /*========================== 05. MEDIA QUERIES ==========================++++++++++*/
+    
+    @media only screen and (max-width: 992px) {
+        nav .brand-logo {
+            transform: translateX(-100%);
+        }
+    }
