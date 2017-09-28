@@ -5,7 +5,11 @@ class AddSticky extends Component {
   constructor(){
     super();
     this.state = {
-      newSticky: {}
+      newSticky: {
+				title: '',
+				content: '',
+				priority: 3
+			}
     }
   }
 
@@ -45,8 +49,8 @@ class AddSticky extends Component {
 	         <label htmlFor="email" >Contenu</label>
 	       </div>
 	       <div className="input-field col s12">
-	       <label htmlFor="priority">Priority</label><br />
-	       <input type="number" ref="priority" />
+	       <label htmlFor="priority">Priorité</label><br />
+	       <input type="number" ref="priority" min="1" max="3" />
 	       {errors}
 	       <input className=" btn-addSticky btn waves-effect waves-light col s6 offset-s3"type="submit" value="Ajouter" />
 	     </div>
