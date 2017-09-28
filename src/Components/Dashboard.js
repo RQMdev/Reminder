@@ -27,9 +27,6 @@ class Dashboard extends Component {
   }
 
   componentDidMount(){
-		if (!this.props.stickys){
-			this.toggleFormAddSticky();
-		}
 	}
 
   render() {

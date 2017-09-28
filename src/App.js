@@ -18,10 +18,6 @@ class App extends Component {
     }
   }
 
-	componentWillMount(){
-
-  }
-
 	componentDidMount = async () => {
 		if(localStorage.getItem('token')){
 			let token =  await localStorage.getItem('token');
@@ -93,6 +89,7 @@ class App extends Component {
 	handleSignOut(){
 		let state = this.state;
 		state.token = '';
+		state.stickys = [];
 		this.setState(state);
 		this.props.history.push('/signin');
 	}
