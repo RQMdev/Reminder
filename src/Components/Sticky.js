@@ -76,7 +76,7 @@ class Sticky extends Component {
   		});
   	}
 
-		console.log(this.state.updatedSticky);
+		console.log(errors);
 
     return (
 			 <div className="col l4 m6 s12 ">
