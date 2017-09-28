@@ -359,4 +359,8 @@
         nav .brand-logo {
             transform: translateX(-70%);
         }
+        form.form-add-sticky.col.l4.m5.offset-l4.offset-m4.z-depth-4 {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
     }
