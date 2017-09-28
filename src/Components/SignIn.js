@@ -40,7 +40,9 @@ class SignIn extends Component {
 
          <div className="col l6 col l6 m8 offset-m2">
 
-            <h1 className="center-align"> Reminder, l'application de pense-bêtes</h1>
+            <h1 className="center-align"> Reminder </h1>
+
+              <h2 className="center-align"> L'application de pense-bêtes pour vous simplifier la vie </h2>
       
                       <ul className="center-align flow-text ">
                           <li><i className="medium material-icons valign-wrapper">account_box</i>Une inscription gratuite</li>
@@ -52,7 +54,7 @@ class SignIn extends Component {
 
       <div className="col l6 col l6 m8 offset-m2">
        <div className="sign-in">
-         <div className="form-login  z-depth-3 row">
+         <div className="form-login  z-depth-3">
           <img className="responsive-img logo-form" src="images/logo-min.png" alt="" />
           <h3 className="center-align">Se connecter à Reminder</h3>
          
@@ -60,7 +62,7 @@ class SignIn extends Component {
           <form className="col s12" method="post" onSubmit={this.handleSubmit.bind(this)}>
           <ul>
             <li>
-              <div className="input-field col s12">
+              <div className="input-field col s12 ">
                 <label>Username ou adresse email </label><br />
                 <input type="text" ref="email" />
               </div>
