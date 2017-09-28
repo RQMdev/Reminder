@@ -170,6 +170,7 @@ class App extends Component {
 
 	handleUpdateSticky(updatedSticky){
 		console.log(updatedSticky);
+		this.cleanErrorInState();
 		$.ajax({
       type: 'POST',
       url: 'stickys/edit',
@@ -191,7 +192,8 @@ class App extends Component {
         console.log('This is an error = ', err);
         console.log('This is the xhr = ', xhr);
         console.log('This is the status = ', status);
-      }
+				this.addErrorToState(xhr);
+      }.bind(this)
     });
 	}
 
