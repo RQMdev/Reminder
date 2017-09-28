@@ -212,6 +212,19 @@
         font-size: 2.5em;
         color: red;
     }
+
+    .text {
+        line-height: 1.5;
+        font-size: 1.5em;
+    }
+
+    .title {
+        text-align: center;
+        font-weight: bold;
+        padding: 10px;
+        line-height:1.5;
+    }
+
     /*========================== 03. STICKY ==========================++++++++++*/
     
     .sticky {

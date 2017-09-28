@@ -40,13 +40,13 @@ class SignIn extends Component {
 
          <div className="col l6 col l6 m8 offset-m2">
 
-            <h1 className="center-align"> Reminder </h1>
+            <h1 className="title"> Reminder </h1>
 
-              <h2 className="center-align"> L'application de pense-bêtes pour vous simplifier la vie </h2>
+              <h2 className="center-align text"> L'application de pense-bêtes pour vous simplifier la vie.</h2>
       
                       <ul className="center-align flow-text ">
-                          <li><i className="medium material-icons valign-wrapper">account_box</i>Une inscription gratuite</li>
-                          <li><i className="medium material-icons valign-wrapper">content_paste</i>Une prise en main rapide </li>
+                          <li><i className="medium material-icons valign-wrapper icones">account_box</i>Une inscription gratuite</li>
+                          <li><i className="medium material-icons valign-wrapper icones">content_paste</i>Une prise en main rapide </li>
                           <li><i className="medium material-icons valign-wrapper">devices</i>Accessible sur tous vos supports </li>
                           <li><a className="waves-effect waves-light btn btn-intro "> <Link to="/signup">Créer un compte maintenant </Link> </a></li>
                       </ul>
@@ -56,7 +56,7 @@ class SignIn extends Component {
        <div className="sign-in">
          <div className="form-login  z-depth-3">
           <img className="responsive-img logo-form" src="images/logo-min.png" alt="" />
-          <h3 className="center-align">Se connecter à Reminder</h3>
+          <h3 className="center-align title ">Se connecter à Reminder</h3>
          
           
           <form className="col s12" method="post" onSubmit={this.handleSubmit.bind(this)}>
