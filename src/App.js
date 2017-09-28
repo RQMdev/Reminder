@@ -185,6 +185,7 @@ class App extends Component {
       success: function(data){
         let stickys = this.state.stickys;
         let index = stickys.findIndex(x => x._id === updatedSticky._id);
+				console.log(index);
 				stickys[index] = data;
         this.setState({stickys});
         console.log('This.state = ', this.state);

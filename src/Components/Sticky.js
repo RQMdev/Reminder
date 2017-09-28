@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ImportanceTag from './ImportanceTag';
 import Error from './Error';
 import $ from 'jquery';
 
@@ -75,6 +76,8 @@ class Sticky extends Component {
   		});
   	}
 
+		console.log(this.state.updatedSticky);
+
     return (
 			 <div className="col l4 m6 s12 ">
         <div className="sticky z-depth-3">
@@ -85,6 +88,7 @@ class Sticky extends Component {
                         <a href="" onClick={this.deleteSticky.bind(this, this.props.sticky)}><i className="large material-icons waves-effect waves-light ">close</i></a>
                     </div>
                     <p className="sticky-texte flow-text">{this.props.sticky.content}</p>
+										<ImportanceTag importanceTag={this.props.sticky.priority}/>
                 </div>
 
 
@@ -100,8 +104,8 @@ class Sticky extends Component {
                <input type="text" ref="content" value={this.state.updatedSticky.content} onChange={this.handleChangeContent.bind(this)}/>
             </li>
             <li>
-               <label>Priority</label><br />
-              <input type="number" ref="priority" value={this.state.updatedSticky.priority} onChange={this.handleChangePriority.bind(this)}/>
+               <label>Priorité</label><br />
+              <input type="number" ref="priority" min="1" max="3" value={this.state.updatedSticky.priority} onChange={this.handleChangePriority.bind(this)}/>
              </li>
              <li>
 							 {errors}
