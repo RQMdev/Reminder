@@ -8,8 +8,9 @@ class Header extends Component {
 	render(){
 		return(
 			<header>
+			<div className="navbar-fixed">
 	        <nav>
-	            <div className="nav-wrapper">
+	            <div className="nav-wrapper navbar-fixed">
 	                <img className="brand-logo" src="images/logo.svg" alt="" />
 	                <a href="#" data-activates="mobile-demo" className="button-collapse"><i className="material-icons">menu</i></a>
 	                <ul className="right hide-on-med-and-down">
@@ -17,9 +18,12 @@ class Header extends Component {
 	                </ul>
 	                <ul className="side-nav" id="mobile-demo">
 	                    <li><a href=""><i className="material-icons">power_settings_new</i>Se déconnecter</a></li>
+						
 	                </ul>
+					
 	            </div>
 	        </nav>
+			</div>
 	    </header>
 		);
 	}
